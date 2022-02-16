@@ -1,10 +1,12 @@
 var express = require("express");
 var app = express();
 var cors = require("cors");
-var expressServer = app.listen(9000);
+var expressServer = app.listen(9000,()=>{
+      console.log("server is running on",9000)
+  });
 
 var socketio = require("socket.io");
-var namespaces = require("./data");
+// var namespaces = require("./data");
 // console.log(namespaces);
 
 var io = socketio(expressServer, {
@@ -71,6 +73,8 @@ if(process.env.NODE_ENV=="production"){
       res.sendFile(path.resolve(__dirname,'client','build','index.html'))
   })
 }
+
+
 
 // loop through each namespace and listen for a connection
 
