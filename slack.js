@@ -1,8 +1,10 @@
 var express = require("express");
 var app = express();
 var cors = require("cors");
-var expressServer = app.listen(9000,()=>{
-      console.log("server is running on",9000)
+const PORT = process.env.PORT || 9000
+
+var expressServer = app.listen(PORT,()=>{
+      console.log("server is running on",PORT)
   });
 
 var socketio = require("socket.io");
