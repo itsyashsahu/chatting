@@ -24,8 +24,8 @@ function App() {
   var mainSocket;
   // var [ mainSocket ,setMainSocket ] = useState();
 
+  mainSocket = MainSocket
   useEffect(() => {
-    mainSocket = MainSocket
     // var newSocket = io(`http://${window.location.hostname}:9000`);
     // mainSocket = io(`http://${window.location.hostname}:9000`);
 
@@ -38,7 +38,7 @@ function App() {
         setCurrUserId(mainSocket.id);
         // console.log("current id ",mainSocket.id)
         // renderOnlineUsers(mainSocket.id)
-        return mainSocket
+        // return mainSocket
       });
 
     // })
@@ -66,7 +66,7 @@ function App() {
     // joinNS("/linux",newSocket ,setNewSocket );
     // joinRoom("Debian",newSocket,setNewSocket );
     // const res = fetch("http://localhost:4000/api/transhistory");
-  }, []);
+  }, [mainSocket]);
 
   // newSocket.on("messageToClients",(msg)=>{
   //   console.log("msy aya ",msg)

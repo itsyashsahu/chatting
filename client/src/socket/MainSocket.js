@@ -5,5 +5,5 @@ import io from "socket.io-client";
 //     return newSocket;
 // }
 // const MainSocket =  io(`http://${window.location.hostname}:9000`);
-const MainSocket =  io(`/`);
+const MainSocket =  io(`/io`);
 export default MainSocket 

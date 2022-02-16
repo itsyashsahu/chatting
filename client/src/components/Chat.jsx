@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import io from "socket.io-client";
+// import io from "socket.io-client";
 import ChatFooter from "../components/ChatFooter";
 import ChatHeader from "../components/ChatHeader";
 import ChatLayout from "../components/ChatLayout";

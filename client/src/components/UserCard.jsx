@@ -20,14 +20,14 @@ export default function UserCard({ id, setSelectedUser,setInChatRoom }) {
 
       <div className="flex-col  flex justify-center items-center">
         <div className="flex-shrink-0">
-          <a href="#" className="block relative">
+          {/* <a href="#" className="block relative"> */}
             {/* <img
               alt="profil"
               src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
               className="mx-auto object-cover rounded-full h-16 w-16 "
             /> */}
             User With Id -- {id}
-          </a>
+          {/* </a> */}
         </div>
         <div className="mt-2 text-center flex flex-col">
           <span className="text-gray-600 text-lg font-medium">User Name</span>

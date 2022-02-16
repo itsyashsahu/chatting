@@ -19,7 +19,7 @@ var io = socketio(expressServer, {
 // io.on = io.of('/').on = io.sockets.on
 // io.emit = io.of('/').emit = io.sockets.emit
 
-io.on("connection", (socket) => {
+io.of("/io").on("connection", (socket) => {
   console.log("a User has Connected ");
 
   const users = [];
@@ -27,7 +27,7 @@ io.on("connection", (socket) => {
   //   console.log(socket.adapter.sids)
 
   // if(socket){
-  for (let [id, socket] of io.of("/").adapter.sids) {
+  for (let [id, socket] of io.of("/io").adapter.sids) {
     users.push({
       userID: id,
       // username: socket.username,
@@ -37,7 +37,7 @@ io.on("connection", (socket) => {
   console.log(users);
 
   //   socket.broadcast.emit("users",users);
-  io.emit("users", users);
+  io.of("/io").emit("users", users);
 
   socket.on("sendPrivateMsg", (toUser,msg) => {
     console.log("server ",toUser,msg);
